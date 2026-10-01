@@ -1,5 +1,10 @@
 const http = require("node:http");
 
+const quoteData = {
+    quote: "Stay curious.",
+    author: "Anonymous"
+}
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, "http://localhost:3000")
 
