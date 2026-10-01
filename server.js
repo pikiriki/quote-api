@@ -20,6 +20,7 @@ const server = http.createServer((req, res) => {
   const url = new URL(req.url, "http://localhost:4000")
 
   if (url.pathname === "/quote") {
+    res.setHeader("Content-Type", "application/json")
     res.end(json)
     return
   }
