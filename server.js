@@ -5,6 +5,11 @@ const quoteData = {
     author: "Anonymous"
 }
 
+console.log(quoteData);
+console.log(quoteData.quote);
+console.log(quoteData.author);
+console.log(typeof quoteData);
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, "http://localhost:3000")
 
