@@ -7,12 +7,14 @@ const quoteData = {
 
 const json = JSON.stringify(quoteData);
 
-console.log(json);
+console.log("Object value:", quoteData);
+console.log("Object type:", typeof quoteData);
 
-console.log(quoteData);
-console.log(quoteData.quote);
-console.log(quoteData.author);
-console.log(typeof quoteData);
+console.log("JSON value:", json);
+console.log("JSON type:", typeof json);
+
+console.log("Author from object:", quoteData.author);
+console.log("Author from JSON text:", json.author);
 
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, "http://localhost:4000")
